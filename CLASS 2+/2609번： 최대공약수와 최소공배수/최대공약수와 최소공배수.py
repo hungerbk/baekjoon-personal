@@ -5,7 +5,7 @@ def input():
 
 n, m = map(int, input().split())
 
-# 파이썬 내장 함수
+# 파이썬 내장 함수 > 내장함수가 더 빠름
 print(math.gcd(n, m))
 print(math.lcm(n, m))
 

@@ -1,11 +1,9 @@
-#  **************************************************************************  #
-#                                                                              #
-#                                                       :::    :::    :::      #
-#    Problem Number: 15649                             :+:    :+:      :+:     #
-#                                                     +:+    +:+        +:+    #
-#    By: kbk0424 <boj.kr/u/kbk0424>                  +#+    +#+          +#+   #
-#                                                   +#+      +#+        +#+    #
-#    https://boj.kr/15649                          #+#        #+#      #+#     #
-#    Solved: 2025/04/19 00:40:21 by kbk0424       ###          ###   ##.kr     #
-#                                                                              #
-#  **************************************************************************  #
+import sys
+import itertools
+
+def input():
+  return sys.stdin.readline().rstrip()
+
+n ,m = map(int, input().split())
+for i in itertools.permutations(range(1, n+1), m):
+    print(' '.join(map(str, i)))

@@ -1,11 +1,15 @@
-#  **************************************************************************  #
-#                                                                              #
-#                                                       :::    :::    :::      #
-#    Problem Number: 11866                             :+:    :+:      :+:     #
-#                                                     +:+    +:+        +:+    #
-#    By: kbk0424 <boj.kr/u/kbk0424>                  +#+    +#+          +#+   #
-#                                                   +#+      +#+        +#+    #
-#    https://boj.kr/11866                          #+#        #+#      #+#     #
-#    Solved: 2025/04/19 00:39:52 by kbk0424       ###          ###   ##.kr     #
-#                                                                              #
-#  **************************************************************************  #
+import sys
+
+def input():
+  return sys.stdin.readline().rstrip()
+
+n, m = map(int, input().split())
+arr = [i for i in range(1, n+1)]
+answer = []
+target = m - 1
+while arr:
+    target %= len(arr)
+    answer.append(arr[target])
+    arr.pop(target)
+    target += m - 1 
+print('<'+', '.join(map(str,answer))+'>')

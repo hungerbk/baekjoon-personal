@@ -1,11 +1,19 @@
-#  **************************************************************************  #
-#                                                                              #
-#                                                       :::    :::    :::      #
-#    Problem Number: 8958                              :+:    :+:      :+:     #
-#                                                     +:+    +:+        +:+    #
-#    By: kbk0424 <boj.kr/u/kbk0424>                  +#+    +#+          +#+   #
-#                                                   +#+      +#+        +#+    #
-#    https://boj.kr/8958                           #+#        #+#      #+#     #
-#    Solved: 2025/04/19 00:38:27 by kbk0424       ###          ###   ##.kr     #
-#                                                                              #
-#  **************************************************************************  #
+import sys
+
+def input():
+  return sys.stdin.readline().rstrip()
+
+n = int(input())
+
+for _ in range(n):
+    str = input()
+    answer = []
+    for i in range(len(str)):
+        if str[i] == 'X':
+            answer.append(0)
+        else:
+            if i == 0:
+                answer.append(1)
+            else:
+                answer.append(answer[i-1] + 1)
+    print(sum(answer))

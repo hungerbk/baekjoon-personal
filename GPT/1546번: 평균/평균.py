@@ -1,11 +1,13 @@
-#  **************************************************************************  #
-#                                                                              #
-#                                                       :::    :::    :::      #
-#    Problem Number: 1546                              :+:    :+:      :+:     #
-#                                                     +:+    +:+        +:+    #
-#    By: kbk0424 <boj.kr/u/kbk0424>                  +#+    +#+          +#+   #
-#                                                   +#+      +#+        +#+    #
-#    https://boj.kr/1546                           #+#        #+#      #+#     #
-#    Solved: 2025/04/19 00:39:10 by kbk0424       ###          ###   ##.kr     #
-#                                                                              #
-#  **************************************************************************  #
+import sys
+
+def input():
+  return sys.stdin.readline().rstrip()
+
+n = int(input())
+score_list = list(map(int, input().split()))
+
+max_score = max(score_list)
+
+answer = sum([i/max_score*100 for i in score_list])/n
+
+print(answer)

@@ -1,11 +1,14 @@
-#  **************************************************************************  #
-#                                                                              #
-#                                                       :::    :::    :::      #
-#    Problem Number: 1181                              :+:    :+:      :+:     #
-#                                                     +:+    +:+        +:+    #
-#    By: kbk0424 <boj.kr/u/kbk0424>                  +#+    +#+          +#+   #
-#                                                   +#+      +#+        +#+    #
-#    https://boj.kr/1181                           #+#        #+#      #+#     #
-#    Solved: 2025/04/19 00:39:19 by kbk0424       ###          ###   ##.kr     #
-#                                                                              #
-#  **************************************************************************  #
+import sys
+
+def input():
+  return sys.stdin.readline().rstrip()
+
+n = int(input())
+
+str_list = set()
+
+for _ in range(n):
+  str_list.add(input())
+
+for i in sorted(str_list, key=lambda x: (len(x), x)):
+  print(i)

@@ -1,11 +1,23 @@
-#  **************************************************************************  #
-#                                                                              #
-#                                                       :::    :::    :::      #
-#    Problem Number: 10815                             :+:    :+:      :+:     #
-#                                                     +:+    +:+        +:+    #
-#    By: kbk0424 <boj.kr/u/kbk0424>                  +#+    +#+          +#+   #
-#                                                   +#+      +#+        +#+    #
-#    https://boj.kr/10815                          #+#        #+#      #+#     #
-#    Solved: 2025/04/19 00:40:29 by kbk0424       ###          ###   ##.kr     #
-#                                                                              #
-#  **************************************************************************  #
+import sys
+
+def input():
+  return sys.stdin.readline().rstrip()
+
+n = int(input())
+card_list = set(map(int, input().split()))
+m = int(input())
+check_list = list(map(int, input().split()))
+# answer = []
+
+for i in check_list:
+    print(1 if i in card_list else 0, end=' ')
+
+# for i in check_list:
+#     if i in card_list:
+#         answer.append(1)
+#     else:
+#         answer.append(0)
+
+# for i in answer:
+#     print(i, end=' ')
+# print(' '.join(map(str, answer)))
